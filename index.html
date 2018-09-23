@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Different Colors Game Jam</title>
+<link rel="stylesheet" type="text/css" href="assets/css.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js.js"></script>
+</head>
+<body>
+
+<div class="dialog">
+	Do you have what it takes to be a corporate boss?
+	<br/>
+	<div class="dialog-button start-game">Yeah I guess...</div>
+</div>
+<br/>
+<div class="dialog questGoodBadEmployee">
+	Welcome aboard  Bill, we believe in you to make this company great again! <br/> <br/>Get to know your employees and see if you can figure who is good or bad.
+	<br/>
+	<div class="dialog-button start-questGoodBadEmployee">Sure</div>
+</div>
+<div class="person-list good-bad"></div>
+
+<div class="name-quest" style="display: none">
+	<div class="the-timer"><img src="assets/img/hourglas.gif" width="30" height="30"><br/><span>120</span></div>
+	<form>
+		<input class="name-quest-input" type="text">
+		<button class="name-quest-button">Submit</button>
+	</form>
+	<div class="name-quest-message-wrapper">
+		<div class="name-quest-message"></div>
+	</div>
+	<div class="person-list name-quest-list"></div>
+</div>
+
+<div class="meeting-quest" style="display: none">
+	<div class="the-timer"><img src="assets/img/hourglas.gif" width="30" height="30"><br/><span>60</span></div>
+	<div class="person-list" style="display: block;"></div>
+	<div class="meeting-score">0</div>
+</div>	
+
+<div class="pie-quest" style="display: none">
+	<div class="the-timer"><img src="assets/img/hourglas.gif" width="30" height="30"><br/><span>15</span></div>
+	<div class="pie-quest-content"></div>
+	<div class="pie-score"></div>
+</div>
+
+<div class="review-quest" style="display: none">
+	<div class="upper-left">Bills review</div>
+	<div class="upper-right">September 23 2018</div>
+	<div class="review-quest-the-review">
+		We on the board have done a review of your time here at the company, we have measured the following things and come to a conclusion about your future:
+		<ul>
+			<li class="dividing">Dividing people: <span>Mediocre</span></li>
+			<li class="knowing">Knowing people: <span>Mediocre</span></li>
+			<li class="listener">People listener: <span>Mediocre</span></li>
+			<li class="piechart">Making pie charts: <span>Mediocre</span></li>
+		</ul>
+		With this information we have come to a conclusion about your future with us...<br/>
+		<div class="dialog-button review-go-on">Go on...</div>
+	</div>
+</div>
+
+<div class="end-credit"  style="display: none">
+	This game was made possible thanks to the "Different Colors Game Jam" on itch.io. I wanted a theme and a timelimit to make something.
+	<br/><br/>
+	The theme of the jam was "You are the boss of the game!" and you had 48h to finish it and there is limitation of colors.
+
+	<br/><br/>
+	I want to thank Daniel Linssen on itch.io for making this extraordinary font that I've been using for this game. You can find it on:<br/>
+	<a href="https://managore.itch.io/m6x11" target="_blank">managore.itch.io/m6x11</a>
+	<br/><br/>
+	I also want to give a special thanks to you for playing this "game"!!!
+	<br/><br/>
+	If you want to try again, just refresh the browser.
+	<br/><br/>
+	Best regards<br/>
+	Terzom
+</div>
+</body>
+</html>

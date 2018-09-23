@@ -1,0 +1,251 @@
+@import url('fonts/font.css');
+
+body, 
+input,
+button {
+	font-family: 'm6x11medium', sans-serif;
+	font-weight: normal;
+}
+
+body {
+	background-color: #eee;
+}
+a {
+	color: #000;
+}
+h2 {
+	font-weight: normal;
+	margin: 0;
+}
+.dialog {
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	border: 5px solid #000;
+	max-width: 500px;
+	padding: 20px;
+	text-align: center;
+	margin: 0 auto;
+
+	position: absolute;
+	background-color: #eee;
+	left: 0;
+	right: 0;
+	top: 30%;
+}
+.dialog.questGoodBadEmployee {
+	display: none;
+}
+
+.dialog-button {
+	border: 3px solid #000;
+	padding: 10px 20px 8px 20px;
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.dialog-button:hover,
+.person-button:hover {
+	background-color: #000;
+	color: #fff;
+}
+.name-quest-button {
+	border: 3px solid #000;
+	padding: 10px 20px 8px 20px;
+	display: inline-block;
+	cursor: pointer;
+	background-color: #eee;
+	font-size: 24px;
+	outline: none;
+	display: block;
+	margin: 10px auto;
+}
+.name-quest-button:hover {
+	background-color: #000;
+	color: #fff;
+}
+.person-list {
+	display: none;
+	max-width: 650px;
+	margin: 0 auto;
+}
+.person-list::after,
+.pie-quest-content::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.person {
+	border: 3px solid #000;
+	height: 125px;
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+	box-sizing: border-box;
+}
+.person span {
+	text-transform: capitalize;
+	font-size: 24px;
+}
+.person .hidden,
+.person:not(.pressed):hover .name {
+	display: none;
+}
+.person:not(.pressed):hover .hidden {
+	display: block;
+}
+
+.person-button {
+	border: 3px solid #000;
+	padding: 5px 10px 3px 10px;
+	display: inline-block;
+	cursor: pointer;
+	margin-bottom: 10px;
+	text-align: center;
+	display: block;
+}
+.good-employee {
+	border-color: lime;
+	color: lime;
+}
+.bad-employee {
+	border-color: red;
+	color: red;
+}
+
+.the-timer {
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 50px;
+}
+.name-quest-message-wrapper {
+	text-align: center;
+	font-size: 24px;
+	margin: 15px 0 0 0;
+	height: 30px;
+}
+.name-quest-message span {
+	text-transform: capitalize;
+}
+.person-list.name-quest-list {
+	display: block;
+	text-transform: capitalize;
+}
+
+.name-quest-input {
+	border: 3px solid #000;
+	padding: 10px 10px 8px 10px;
+	outline: none;
+	background-color: #eee;
+	font-size: 24px;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+}
+
+.person-button.yes,
+.person.good-meeting {
+	border-color: lime;
+	color: lime;
+}
+.person-button.no,
+.person.bad-meeting {
+	border-color: red;
+	color: red;
+}
+.person-button.yes:hover {
+	background-color: lime;
+	color: #fff;
+}
+.person-button.no:hover {
+	background-color: red;
+	color: #fff;
+}	
+
+.meeting-quest .person:not(.good-meeting):not(.bad-meeting):hover .name {
+	display: block;
+}
+.meeting-quest .person:not(.good-meeting):not(.bad-meeting):hover .hidden {
+	display: none;
+}
+
+.meeting-score {
+	display: block;
+	text-align: center;
+	font-size: 36px;
+	margin-top: 15px;
+}
+.pie-quest {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.pie-part {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 30px 60px 30px;
+	border-color: transparent transparent red transparent;
+	border-radius: 100px;
+	float: left;
+	margin: 10px;
+}
+.pie-part.green {
+	border-bottom-color: lime;
+}
+.pie-part.red {
+	border-bottom-color: red;
+}
+
+.pie-quest .pie-part:nth-child(4n+2) {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);	
+}
+.pie-quest .pie-part:nth-child(4n+3) {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);	
+}
+.pie-quest .pie-part:nth-child(4n+4) {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);	
+}
+
+.pie-score {
+	margin-top: 20px;
+}
+.pie-score .pie-full {
+	height: 60px;
+	width: 60px;
+	background-color: lime;
+	border-radius: 60px;
+	float: left;
+	margin: 10px;
+}
+.end-credit,
+.review-quest {
+	max-width: 500px;
+	margin: 0 auto;
+	border: 3px solid #000;
+	padding: 50px 20px 20px 20px;
+	position: relative;
+}
+.review-quest-the-review {
+	padding: 50px;
+	font-size: 24px;
+}
+.review-quest .upper-left {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.review-quest .upper-right {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.end-credit {
+	font-size: 24px;
+	padding-top: 20px;
+}
