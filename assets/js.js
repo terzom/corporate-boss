@@ -53,11 +53,9 @@ function questGoodBadEmployee() {
 			$(this).parents('.person').addClass('pressed bad-employee');
 		}
 
-		// Check if all button is pressed
 		employeePressed++;
 
 		if (employeePressed == employeeList.length) {
-		// if (employeePressed == 2) {
 			var employeeScore = 0;
 			var z = 0;
 			$('.person-list.good-bad .person').each(function() {
@@ -92,6 +90,8 @@ function questGoodBadEmployee() {
 function questRemeberTheirNames() {
 	$('.questRemeberTheirNames').fadeOut(300);
 	$('.name-quest').fadeIn(300);
+
+	$('.name-quest-no-remember').delay(5000).fadeIn(1000);
 
 	var xTime = 120;
 	var timer = setInterval(timer, 1000);
@@ -132,6 +132,11 @@ function questRemeberTheirNames() {
 		}
 
 	});
+
+	$('.name-quest-no-remember').click(function() {
+		questRemeberTheirNamesEnd(checkTheScore());
+	});
+
 	function checkTheScore() {
 		var nameScore = 0;
 		$('.person-list.name-quest-list .person').each(function() {

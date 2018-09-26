@@ -32,6 +32,14 @@ h2 {
 	right: 0;
 	top: 30%;
 }
+.floating-click-pointer {
+	position: absolute;
+	bottom: -60px;
+    right: 130px;
+	  -webkit-transform: rotate(-20deg);
+	      -ms-transform: rotate(-20deg);
+	          transform: rotate(-20deg);
+}
 .dialog.questGoodBadEmployee {
 	display: none;
 }
@@ -63,9 +71,15 @@ h2 {
 	background-color: #000;
 	color: #fff;
 }
+.dialog-button.name-quest-no-remember {
+	text-align: center;
+	display: none;
+	width: 140px;
+	margin: 75px auto 0 auto;
+}
 .person-list {
 	display: none;
-	max-width: 650px;
+	max-width: 600px;
 	margin: 0 auto;
 }
 .person-list::after,
